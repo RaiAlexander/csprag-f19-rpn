@@ -18,5 +18,3 @@ class TestBasics(unittest.TestCase):
     def test_power(self):
         result = rpn.calculate("3 4 ^")
         self.assertEqual(81, result)
-    def test_Error(self):
-        result = rpn.calculate("1 2 3 +")

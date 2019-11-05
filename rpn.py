@@ -9,6 +9,9 @@ operators = {
     '*': operator.mul,
     '/': operator.truediv,
     '^': operator.pow,
+    '<': operator.lt,
+    '>': operator.gt,
+    '==': operator.equal,
 }
 
 def calculate(myarg):
