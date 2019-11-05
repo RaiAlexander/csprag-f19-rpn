@@ -46,6 +46,7 @@ def calculate(myarg):
             # print(colored(arg1, num1color, attrs=['bold']), colored(token, 'yellow'), colored(arg2, num2color, attrs=['bold']), 
             #     colored('=', 'white'), colored(result, 'magenta', attrs=['underline']))
         print(stack)
+        
     if len(stack) != 1:
         raise TypeError("Too many parameters")
     return stack.pop()
