@@ -11,7 +11,7 @@ operators = {
     '^': operator.pow,
     '<': operator.lt,
     '>': operator.gt,
-    '==': operator.equal,
+    '==': operator.eq,
 }
 
 def calculate(myarg):
