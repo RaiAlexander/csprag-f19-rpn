@@ -44,7 +44,7 @@ def calculate(myarg):
             result = function(arg1, arg2)
             stack.append(result)
             print(colored(arg1, num1color, attrs=['bold']), colored(token, 'yellow'), colored(arg2, num2color, attrs=['bold']), 
-                colored('=', 'white'), colored(result, 'magenta', attrs=['underline']))
+                colored('=', 'white', 'on_red'), colored(result, 'magenta', attrs=['underline']))
         print(stack)
         
     if len(stack) != 1:
