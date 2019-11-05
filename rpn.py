@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
 import operator
+import readline
+from termcolor import colored
 
 
 operators = {
@@ -22,14 +24,27 @@ def calculate(myarg):
             stack.append(token)
         except ValueError:
             function = operators[token]
+            num1color = 'green'
+            num2color = 'green'
             arg2 = stack.pop()
             arg1 = stack.pop()
-            if arg1 == 2:
-                print("I am here")
-            if arg2 == 2:
-                print("I am now here")
+            if arg1 < 0:
+                num1color = 'red'
+            else:
+                num1color = 'cyan'
+            if arg2 < 0:
+                num2color = 'red'
+            else:
+                num2color = 'blue'
+            # Added to show coverage difference
+            # if arg1 == 2:
+            #     print("I am here")
+            # if arg2 == 2:
+            #     print("I am now here")
             result = function(arg1, arg2)
             stack.append(result)
+            print(colored(arg1, num1color, attrs=['bold']), colored(token, 'yellow'), colored(arg2, num2color, attrs=['bold']), 
+                colored('=', 'white'), colored(result, 'magenta', attrs=['underline']))
         print(stack)
     if len(stack) != 1:
         raise TypeError("Too many parameters")
