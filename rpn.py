@@ -24,6 +24,10 @@ def calculate(myarg):
             function = operators[token]
             arg2 = stack.pop()
             arg1 = stack.pop()
+            if arg1 == 2:
+                print("I am here")
+            if arg2 == 2:
+                print("I am now here")
             result = function(arg1, arg2)
             stack.append(result)
         print(stack)
