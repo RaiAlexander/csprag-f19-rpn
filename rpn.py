@@ -2,7 +2,7 @@
 
 import operator
 import readline
-from termcolor import colored
+# from termcolor import colored
 
 
 operators = {
@@ -43,8 +43,8 @@ def calculate(myarg):
             #     print("I am now here")
             result = function(arg1, arg2)
             stack.append(result)
-            print(colored(arg1, num1color, attrs=['bold']), colored(token, 'yellow'), colored(arg2, num2color, attrs=['bold']), 
-                colored('=', 'white'), colored(result, 'magenta', attrs=['underline']))
+            # print(colored(arg1, num1color, attrs=['bold']), colored(token, 'yellow'), colored(arg2, num2color, attrs=['bold']), 
+            #     colored('=', 'white'), colored(result, 'magenta', attrs=['underline']))
         print(stack)
     if len(stack) != 1:
         raise TypeError("Too many parameters")
