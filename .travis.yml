@@ -6,6 +6,6 @@ install:
   - pip install pytest-cov
   - pip install coverage
 script:
-  - pytest
+  - pytest --cov
 after_success:
   - coveralls
